@@ -20,11 +20,84 @@
         </div>
     </div>
 
-    <div class="container mt-5">
-        <div class="row d-flex">
-            <div class="col">
-                <img class="img-fluid w-100" src="img/Hero-img.png" alt="">
+    <!-- Hero Image -->
+    <div class="imgbg my-5">
+        <br>
+    </div>
+    <!-- Hero Image -->
+
+    <div class="container my-5">
+        <div class="row d-flex justify-content-center">
+            <div class="col-12">
+                <h4>Taman Nasional Ujung Kulon memiliki beragam jenis satwa liar baik bersifat endemik maupun penting untuk dilindungi. Selain memiliki ciri khas flora dan fauna, terdapat juga sejumlah obyek wisata yang menarik dan eksotis yang sangat layak untuk dikunjungi.</h4>
             </div>
         </div>
     </div>
+
+    <!-- Jumbotron -->
+    <div class="container my-5">
+        <div class="row d-flex">
+            <div class="col-12 mx-0 px-0">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item w-100 vh-100" src="https://www.youtube.com/embed/rGDEcECBbwo" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Jumbotron -->
+
+    <div class="container my-5">
+        <div class="row d-flex my-5">
+            <div class="col-12 px-0">
+                <div class="row d-flex align-items-center justify-content-between">
+                    <div class="col-5">
+                        <img src="img/Image2.png" class="w-100"alt="">
+                    </div>
+                    <div class="col-6">
+                        <hr>
+                        <h2 class="mb-3">Satu Taman Nasional, <br>Berbagai Macam Satwa</h2>
+                        <p class="mb-3 pb-3">Kawasan Taman Nasional Ujung Kulon menampung perkembangbiakan <br> berbagai populasi satwa liar. Beberapa jenis satwa endemik penting dan <br> merupakan jenis langka yang sangat perlu dilindungi.</p>
+                        <button class="btn btn-secondary px-4 py-2">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container my-5">
+        <div class="row d-flex my-5">
+            <div class="col-12 px-0">
+                <div class="row d-flex align-items-center justify-content-between">
+                    <div class="col-6">
+                        <hr>
+                        <h2 class="mb-3">Nikmati Keindahan Alam <br> Ujung Kulon</h2>
+                        <p class="mb-3 pb-3">Taman Nasional Ujung Kulon menawarkan pesona alam unik yang <br> jarang ditemukan di tempat lainnya. Aneka keunikan dan keindahan <br> alam dapat  ditemukan, mulai dari air terjun, sungai, pantai berpasir <br> putih, taman laut, hingga sumber air panas</p>
+                    </div>
+                    <div class="col-5">
+                        <img src="img/Image3.png" class="w-100"alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row d-flex my-5">
+            <div class="col-12 px-0">
+                <div class="row d-flex align-items-center justify-content-between">
+                    <div class="col-5">
+                        <img src="img/Image4.png" class="w-100"alt="">
+                    </div>
+                    <div class="col-6">
+                        <hr>
+                        <h2 class="mb-3">Bantuan Anda Sangat Dibutuhkan</h2>
+                        <p class="mb-3 pb-3">Untuk merawat hewan dan tumbuhan yang tak terhitung jumlahnya di Taman Nasional, dan menaruh harapan kepada satwa liar paling luar biasa di dunia yang mengandalkan kami untuk bertahan hidup — dan berkembang — setiap hari</p>
+                        <button class="btn btn-secondary px-4 py-2">Donasi</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 @endsection 

@@ -38,9 +38,8 @@
     </nav>
     <!-- Navbar -->
 
-    <div class="container no-padding no-margin w-fullscreen">
-        @yield('main')
-    </div>
+    
+    @yield('main')
 
 
     <!-- Optional JavaScript; choose one of the two! -->

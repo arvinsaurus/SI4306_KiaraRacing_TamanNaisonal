@@ -34,3 +34,42 @@ h1, h2, h3, h4, h5, h6 {
 p {
     color: #cccccc;
 }
+
+.imgbg {
+    background-image: url(img/Hero-img.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    height: 100vh;
+}
+
+h1 {
+    font-size: 72px;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+h4 {
+    font-size: 32px;
+}
+
+h5 {
+    font-size: 24px;
+}
+
+h6 {
+    font-size: 20px;
+}
+
+hr {
+    color: #fff;
+    border: 1px;
+    width: 56px;
+}
