@@ -1,0 +1,36 @@
+body {
+    background: #000;
+    font-family: 'IBM Plex Sans';
+}
+
+nav {
+    background: #000;
+}
+
+.btn {
+    font-weight: 500;
+}
+
+.btn-primary {
+    background: white;
+    border: 0px;
+    color: black;
+}
+
+.btn-secondary {
+    background: #1e1e1e;
+    border: 0px;
+}
+
+
+.nav-link {
+    font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: white;
+}
+
+p {
+    color: #cccccc;
+}
