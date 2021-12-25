@@ -7,6 +7,10 @@ nav {
     background: #000;
 }
 
+a {
+    text-decoration: none;
+}
+
 .btn {
     font-weight: 500;
 }
@@ -27,7 +31,7 @@ nav {
     font-weight: 500;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p, footer {
     color: white;
 }
 
@@ -35,13 +39,22 @@ p {
     color: #cccccc;
 }
 
-.imgbg {
+.heroimg {
     background-image: url(img/Hero-img.png);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 
     height: 100vh;
+}
+
+.aboutimg {
+    background-image: url(img/aboutimg.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no repeat;
+
+    height: 80vh
 }
 
 h1 {
@@ -71,5 +84,10 @@ h6 {
 hr {
     color: #fff;
     border: 1px;
-    width: 56px;
+    width: 56px !important;
+}
+
+/* Satwa */
+.satwa1::hover {
+    color: #000;
 }

@@ -21,7 +21,7 @@
     </div>
 
     <!-- Hero Image -->
-    <div class="imgbg my-5">
+    <div class="heroimg my-5">
         <br>
     </div>
     <!-- Hero Image -->
@@ -29,7 +29,7 @@
     <div class="container my-5">
         <div class="row d-flex justify-content-center">
             <div class="col-12">
-                <h4>Taman Nasional Ujung Kulon memiliki beragam jenis satwa liar baik bersifat endemik maupun penting untuk dilindungi. Selain memiliki ciri khas flora dan fauna, terdapat juga sejumlah obyek wisata yang menarik dan eksotis yang sangat layak untuk dikunjungi.</h4>
+                <h5>Taman Nasional Ujung Kulon memiliki beragam jenis satwa liar baik bersifat endemik maupun penting untuk dilindungi. Selain memiliki ciri khas flora dan fauna, terdapat juga sejumlah obyek wisata yang menarik dan eksotis yang sangat layak untuk dikunjungi.</h5>
             </div>
         </div>
     </div>
@@ -46,8 +46,8 @@
     </div>
     <!-- Jumbotron -->
 
-    <div class="container my-5">
-        <div class="row d-flex my-5">
+    <div class="container mb-5">
+        <div class="row d-flex">
             <div class="col-12 px-0">
                 <div class="row d-flex align-items-center justify-content-between">
                     <div class="col-5">
@@ -65,8 +65,8 @@
     </div>
 
 
-    <div class="container my-5">
-        <div class="row d-flex my-5">
+    <div class="container mb-5">
+        <div class="row d-flex">
             <div class="col-12 px-0">
                 <div class="row d-flex align-items-center justify-content-between">
                     <div class="col-6">
@@ -82,13 +82,13 @@
         </div>
     </div>
 
-    <div class="container my-5">
-        <div class="row d-flex my-5">
+    <div class="container mb-5">
+        <div class="row d-flex">
             <div class="col-12 px-0">
                 <div class="row d-flex align-items-center justify-content-between">
                     <div class="col-5">
                         <img src="img/Image4.png" class="w-100"alt="">
-                    </div>
+                      </div>
                     <div class="col-6">
                         <hr>
                         <h2 class="mb-3">Bantuan Anda Sangat Dibutuhkan</h2>
@@ -99,5 +99,42 @@
             </div>
         </div>
     </div>
+
+    <!-- News -->
+    <div class="container mb-5">
+        <div class="row d-flex">
+            <div class="col-12 mb-4">
+                <hr>
+                <h4>Berita Satwa</h4>
+            </div>
+        </div>
+        <div class="row d-flex">
+            <div class="col-12">
+                <div class="row d-flex">
+                    @foreach($shownews as $news)
+                    <a href="{{$news -> url}}">
+                    <div class="col-4">
+                        <img src="{{ $news -> gambar}}" class="w-100 mb-3" alt="">
+                        <h6>{{ $news -> judul }}</h6>
+                        <p>{{ $news -> tanggal }}</p>
+                    </div>
+                    </a>
+
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /News -->
+
+    <div class="container my-4">
+        <div class="col-12">
+            <footer>Ⓒ Copyright 2021. Taman Nasional Ujung Kulon</footer>
+        </div>
+    </div>
+
+
+
+
 
 @endsection 

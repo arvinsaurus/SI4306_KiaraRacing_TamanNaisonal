@@ -11,13 +11,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <title>Hello, world!</title>
+    <title>Taman Nasional Ujung Kulon | Home</title>
   </head>
   <body>
       <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark px-5 py-4">
         <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
             <img src="img/Logo.png" alt="Logo" height="32px">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,10 +25,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav gap-4 ms-auto">
-            <a class="nav-link" href="#">Tentang Kami</a>
-            <a class="nav-link" href="#">Satwa</a>
-            <a class="nav-link" href="#">Donasi</a>
-            <a class="nav-link" href="#">Pesan Tiket</a>
+            <a class="nav-link" href="/about">Tentang Kami</a>
+            <a class="nav-link" href="/satwa">Satwa</a>
+            <a class="nav-link" href="/donasi">Donasi</a>
+            <a class="nav-link" href="/booking">Pesan Tiket</a>
             <a href="#">
                 <button class="btn btn-secondary px-4 py-1">Sign In</button>
             </a>

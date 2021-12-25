@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\IndexController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\SatwaController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +17,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
+
+Route::get('/', [IndexController::class, 'index']);
+
+Route::get('/about', [AboutController::class, 'about']);
+
+Route::get('/satwa', [SatwaController::class, 'satwa']);
