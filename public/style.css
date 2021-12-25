@@ -88,6 +88,15 @@ hr {
 }
 
 /* Satwa */
-.satwa1::hover {
-    color: #000;
+
+
+.overlay {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+    opacity: 0;
+    transition: .5s ease;
 }
+
+
+a:hover .overlay {
+    opacity: 1;
+} 
