@@ -17,12 +17,16 @@ use App\Http\Controllers\SatwaController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('index');
-// });
+    // Route::get('/', function () {
+    //     return view('index');
+    // });
 
 Route::get('/', [IndexController::class, 'index']);
 
 Route::get('/about', [AboutController::class, 'about']);
 
 Route::get('/satwa', [SatwaController::class, 'satwa']);
+
+Route::get('/donasi', function() {
+    return view('donasi');
+});
