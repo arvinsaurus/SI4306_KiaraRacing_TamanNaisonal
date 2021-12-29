@@ -57,6 +57,16 @@ p, label {
     height: 80vh
 }
 
+.bookingimg {
+    background-image: url(img/Booking.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no repeat;
+
+    height: 100vh;
+    width: 100vh;
+}
+
 .donasiimg {
     background-image: url(img/Donasi.png);
     background-size: cover;
@@ -66,6 +76,7 @@ p, label {
     height: 100vh;
     width: 100vh;
 }
+
 
 h1 {
     font-size: 72px;
@@ -117,3 +128,19 @@ input[type="date"] {
     border: 0;
     height: 48px;
 }
+
+input[type="text"] {
+    background-color: #2C2C2C;
+    color: white;
+    border: 0;
+    height: 48px;
+}
+
+.count {
+    background-color: #2C2C2C;
+    color: white;
+    border: 0;
+    font-weight: 500;
+    border-radius: 4px;
+}
+

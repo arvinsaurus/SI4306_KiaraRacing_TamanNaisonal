@@ -27,6 +27,10 @@ Route::get('/about', [AboutController::class, 'about']);
 
 Route::get('/satwa', [SatwaController::class, 'satwa']);
 
+Route::get('/booking', function() {
+    return view('booking');
+});
+
 Route::get('/donasi', function() {
     return view('donasi');
 });

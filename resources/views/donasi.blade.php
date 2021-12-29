@@ -25,16 +25,23 @@
                 <img src="img/Logo.png" alt="Logo" height="32px">
             </a>
         </div>
-
         <div class="col">
             <div class="container p-5 ms-5">
-                <h3>Pesan Tiket</h3>
-                <p>Pesan tiket dan rasakan petualangan di <br>Taman Nasional Ujung Kulon</p>
-                <div class="form-group">
-                    <form action="#" method="POST">
-                        <label for="date" class="mb-2">Pilih Tanggal</label>
-                        <input type="date" name="date" class="form-control w-50">
-                    </form>
+                <div class="col w-50">
+                    <h3>Donasi</h3>
+                    <p>Menaruh harapan kepada satwa liar paling luar biasa di dunia yang mengandalkan kami untuk bertahan hidup — dan berkembang — setiap hari</p>
+                </div>
+                <div class="col w-50">
+                    <div class="form-group">
+                        <form action="#" method="POST">
+                            <label for="amount" class="mb-2">Jumlah Donasi</label>
+                            <input type="text" name="amount" class="amount form-control" placeholder="Rp.50.000">
+                            <br>
+                            <button class="btn btn-primary px-4 py-2 w-100">
+                                Pesan Tiket
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
