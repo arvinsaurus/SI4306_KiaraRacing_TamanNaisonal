@@ -10,16 +10,19 @@ use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
+    protected $table = "users";
+    protected $primaryKey = "id";
     protected $fillable = [
-        'name',
+        'nama',
         'email',
+        'level',
         'password',
     ];
 
@@ -33,6 +36,12 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    protected $dates = [
+        'created_at',
+        'updated_at',
+    ];
+
+
     /**
      * The attributes that should be cast.
      *
@@ -41,4 +50,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function booking()
+    {
+        return $this->belongsTo(Booking::class, 'id', 'users_id');
+    }
+
+    public function donasi()
+    {
+        return $this->belongsTo(Booking::class, 'id', 'users_id');
+    }
 }

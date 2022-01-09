@@ -1,6 +1,7 @@
-@extends('navbar')
+@extends('layouts/main')
+@section('title','Tentang Kami')
 
-@section('main')
+@section('main-content')
 <!-- Image -->
     <div class="aboutimg mb-5">
         <br>
@@ -108,11 +109,11 @@
             <div class="col-12">
                 <div class="row d-flex">
                     @foreach($shownews as $news)
-                    <a href="{{$news -> url}}">
+                    <a href="{{$news->url}}">
                     <div class="col-4">
-                        <img src="{{ $news -> gambar}}" class="w-100 mb-3" alt="">
-                        <h6>{{ $news -> judul }}</h6>
-                        <p>{{ $news -> tanggal }}</p>
+                        <img src="{{ $news->gambar}}" class="w-100 mb-3" alt="">
+                        <h6>{{ $news->judul }}</h6>
+                        <p>{{ $news->created_at->format('d M Y') }}</p>
                     </div>
                     </a>
 
@@ -122,13 +123,4 @@
         </div>
     </div>
     <!-- /News -->
-
-    <div class="container my-4">
-        <div class="col-12">
-            <footer>Ⓒ Copyright 2021. Taman Nasional Ujung Kulon</footer>
-        </div>
-    </div>
-
-
-
 @endsection

@@ -1,6 +1,7 @@
-@extends('navbar')
+@extends('layouts/main')
+@section('title','Home')
 
-@section('main')
+@section('main-content')
     <div class="row d-flex justify-content-center">
         <div class="col-10 text-center mt-5">
             <h1 class="w-100">Taman Nasional Ujung Kulon</h1>
@@ -11,12 +12,8 @@
     </div>
     <div class="row d-flex gap-2 justify-content-center mt-4">
         <div class="col-4 text-center">
-            <button class="btn btn-primary px-4 py-2">
-                Pesan Tiket
-            </button>
-            <button class="btn btn-secondary px-4 py-2">
-                Read More
-            </button>
+            <a href="{{ route('ticket-booking') }}" class="btn btn-primary px-4 py-2">Pesan Tiket</a>
+            <a href="{{ route('about') }}" class="btn btn-secondary px-4 py-2">Read More</a>
         </div>
     </div>
 
@@ -57,13 +54,12 @@
                         <hr>
                         <h2 class="mb-3">Satu Taman Nasional, <br>Berbagai Macam Satwa</h2>
                         <p class="mb-3 pb-3">Kawasan Taman Nasional Ujung Kulon menampung perkembangbiakan <br> berbagai populasi satwa liar. Beberapa jenis satwa endemik penting dan <br> merupakan jenis langka yang sangat perlu dilindungi.</p>
-                        <button class="btn btn-secondary px-4 py-2">Read More</button>
+                        <a href="{{ route('satwa') }}" class="btn btn-secondary px-4 py-2">Read More</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 
     <div class="container mb-5">
         <div class="row d-flex">
@@ -93,7 +89,7 @@
                         <hr>
                         <h2 class="mb-3">Bantuan Anda Sangat Dibutuhkan</h2>
                         <p class="mb-3 pb-3">Untuk merawat hewan dan tumbuhan yang tak terhitung jumlahnya di Taman Nasional, dan menaruh harapan kepada satwa liar paling luar biasa di dunia yang mengandalkan kami untuk bertahan hidup — dan berkembang — setiap hari</p>
-                        <button class="btn btn-secondary px-4 py-2">Donasi</button>
+                        <a href="{{ route('donation') }}" class="btn btn-secondary px-4 py-2">Donasi</a>
                     </div>
                 </div>
             </div>
@@ -111,30 +107,21 @@
         <div class="row d-flex">
             <div class="col-12">
                 <div class="row d-flex">
-                    @foreach($shownews as $news)
-                    <a href="{{$news -> url}}">
                     <div class="col-4">
-                        <img src="{{ $news -> gambar}}" class="w-100 mb-3" alt="">
-                        <h6>{{ $news -> judul }}</h6>
-                        <p>{{ $news -> tanggal }}</p>
-                    </div>
-                    </a>
+                        @foreach($shownews as $news)
+                        <a href="{{$news->url}}">
+                        <div class="col">
+                            <img src="{{ $news->gambar}}" class="w-100 mb-3" alt="">
+                            <h6>{{ $news->judul }}</h6>
+                            <p>{{ $news->created_at->format('d M Y') }}</p>
+                        </div>
+                        </a>
 
-                    @endforeach
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- /News -->
-
-    <div class="container my-4">
-        <div class="col-12">
-            <footer>Ⓒ Copyright 2021. Taman Nasional Ujung Kulon</footer>
-        </div>
-    </div>
-
-
-
-
-
 @endsection 

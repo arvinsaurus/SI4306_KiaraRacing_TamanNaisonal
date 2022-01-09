@@ -1,11 +1,13 @@
-@extends('navbar')
-@section('main')
+@extends('layouts/main')
+@section('title','Satwa')
+
+@section('main-content')
     <div class="container my-5">
         <div class="row d-flex justify-content-center">
             <div class="col-12">
                 <div class="row d-flex justify-content-center">
                     <hr>
-               </div>
+                </div>
                 <div class="row d-flex justify-content-center">
                     <div class="col-6 text-center">
                         <h3 class="w-100 mb-3">Satu Taman Nasional, <br>Berbagai Macam Satwa</h3>
@@ -91,11 +93,11 @@
             <div class="col-12">
                 <div class="row d-flex">
                     @foreach($shownews as $news)
-                    <a href="{{$news -> url}}">
+                    <a href="{{$news->url}}">
                     <div class="col-4">
-                        <img src="{{ $news -> gambar}}" class="w-100 mb-3" alt="">
-                        <h6>{{ $news -> judul }}</h6>
-                        <p>{{ $news -> tanggal }}</p>
+                        <img src="{{ $news->gambar}}" class="w-100 mb-3" alt="">
+                        <h6>{{ $news->judul }}</h6>
+                        <p>{{ $news->created_at->format('d M Y') }}</p>
                     </div>
                     </a>
                     @endforeach
@@ -104,11 +106,5 @@
         </div>
     </div>
     <!-- /News -->
-
-    <div class="container my-4">
-        <div class="col-12">
-            <footer>Ⓒ Copyright 2021. Taman Nasional Ujung Kulon</footer>
-        </div>
-    </div>
 
 @endsection

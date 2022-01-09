@@ -1,0 +1,56 @@
+{{-- coba --}}
+@foreach ($tickets as $t)
+<div class="col mb-4">
+    <div class="row d-flex align-items-center">
+        <div class="col-md-7">
+            <p class="m-0 fw-bolder">{{ $t->golongan }}</p>
+            <p class="m-0">Rp. {{ $t->harga }}</p>
+        </div>
+        <div class="col-md-5">
+            <button class="btn" id="btn{{ $t->abbrev }}">
+                <span class="bg-light rounded-circle p-2">
+                    <i class="fas fa-fw fa-minus "></i>
+                </span>
+            </button>
+            <input type="number" class="count text-center w-25 p-2 bg-dark border-0 text-light" name="{{ $t->abbrev }}" id="{{ $t->abbrev }}" value="0" min="0">
+            <button class="btn" id="btnTambah{{ $t->abbrev }}">
+                <span class="bg-light rounded-circle p-2">
+                    <i class="fas fa-fw fa-plus "></i>
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+
+@endforeach
+{{-- end of coba --}}
+
+
+// coba
+document.getElementById("btnTambahDewasa").addEventListener("click", tambahDewasa);
+document.getElementById("btnKurangDewasa").addEventListener("click", kurangDewasa);
+document.getElementById("btnTambahAnak").addEventListener("click", tambahAnak);
+document.getElementById("btnKurangAnak").addEventListener("click", kurangAnak);
+dewasa = document.getElementById("dewasa");
+anak = document.getElementById("anak");
+var noDewasa = 0;
+var noAnak = 0;
+
+function tambahDewasa(){
+dewasa.value = ++noDewasa;
+}
+
+function kurangDewasa(){
+dewasa.min = "0";
+dewasa.value = --noDewasa;
+}
+
+function tambahAnak(){
+anak.value = ++noAnak;
+}
+
+function kurangAnak(){
+anak.min = "0";
+anak.value = --noAnak;
+}
+// end of coba
