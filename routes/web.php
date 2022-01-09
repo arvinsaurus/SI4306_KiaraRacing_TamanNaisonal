@@ -54,9 +54,18 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin']], function () {
     });
 });
 
+<<<<<<< HEAD
 Route::group(['middleware' => ['auth', 'ceklevel:user']], function () {
     Route::prefix('user')->group(function () {
         Route::get('/donation-history', [DonationController::class, 'userIndex'])->name('user.donation-history');
         Route::get('/booking-history', [BookingController::class, 'userIndex'])->name('user.booking-history');
     });
+=======
+Route::get('/booking', function() {
+    return view('booking');
+});
+
+Route::get('/donasi', function() {
+    return view('donasi');
+>>>>>>> 4f4121c0e6e33d32b16b58cc139e8652d2dcdcf2
 });
