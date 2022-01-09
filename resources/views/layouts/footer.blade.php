@@ -1,6 +1,6 @@
-        <div class="footer py-3 mb-0">
+        <div class="footer py-3 mb-0 sticky-footer">
             <div class="container">
-                <span class="text-muted">Ⓒ Copyright 2021. Taman Nasional Ujung Kulon</span>
+                <p class="text-muted">Ⓒ Copyright 2021. Taman Nasional Ujung Kulon</p>
             </div>
         </div>
 

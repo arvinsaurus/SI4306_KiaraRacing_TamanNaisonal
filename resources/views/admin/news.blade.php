@@ -48,7 +48,12 @@
                             </div>
                     </div>
                     <div class="col-md-2 text-end">
-                        <a href="{{ route('admin.news.destroy',$n->id) }}" class="btn btn-secondary py-2 px-4 fs-6">Delete</a>
+                        <a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalEditBerita{{ $n->id }}">
+                            <i class="fas fa-fw fa-pencil-alt"></i>
+                        </a>
+                        <a href="{{ route('admin.news.destroy', $n->id) }}" class="btn btn-secondary">
+                            <i class="fas fa-fw fa-times"></i>
+                        </a>
                     </div>
                 </div>
                 @endforeach
@@ -102,5 +107,54 @@
         </div>
     </div>   
     {{-- end of modal add berita --}}
+
+    {{-- modal edit berita --}}
+    @foreach ($news as $n)
+    <div class="modal fade" id="modalEditBerita{{ $n->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+            <div class="modal-content bg-black px-5">
+                <div class="modal-header border-bottom border-secondary">
+                    <img src="{{ asset('img/Logo.png') }}" alt="" height="40em">
+                    <p class="fw-bold pt-4">Edit Berita</p>
+                </div>
+                <form method="POST" action="{{ route('admin.news.update',$n->id) }}">
+                @csrf
+                <div class="my-3">
+                    <input type="hidden" name="id" value="{{ $n->id }}">
+                    <label for="judul" class="col-form-label fw-bold">Judul Berita</label>
+                    <input type="text" class="form-control @error('judul') is-invalid @enderror p-2 bg-dark border-0 text-light" name="judul" id="judul" value="{{ $n->judul }}">
+                    @error('judul')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                </div>
+                <div class="mb-3">
+                    <label for="url" class="col-form-label fw-bold">URL</label>
+                    <input type="text" class="form-control @error('url') is-invalid @enderror p-2 bg-dark border-0 text-light" name="url" id="url" value="{{ $n->url }}">
+                    @error('url')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                </div>
+                <div class="mb-3">
+                    <label for="gambar" class="col-form-label fw-bold">URL Gambar</label>
+                    <input type="text" class="form-control @error('gambar') is-invalid @enderror p-2 bg-dark border-0 text-light" name="gambar" id="gambar" value="{{ $n->gambar }}">
+                    @error('gambar')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                </div>
+                <div class="my-5">
+                    <input type="submit" class="btn btn-primary w-100 fw-bold p-2" value="Update">
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>   
+    @endforeach
+    {{-- end of modal edit berita --}}
 
 @endsection

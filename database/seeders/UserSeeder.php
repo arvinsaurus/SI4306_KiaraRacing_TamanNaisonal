@@ -17,18 +17,9 @@ class UserSeeder extends Seeder
     {
         $user = [
             [
-                'nama' => 'User Satu',
-                'email' => 'user1@example.com',
-                'password' => bcrypt('12345'),
-                'level' => 'user',
-                'remember_token' => Str::random(60),
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'nama' => 'Admin Satu',
-                'email' => 'admin1@example.com',
-                'password' => bcrypt('12345'),
+                'nama' => 'Admin',
+                'email' => 'admin@example.com',
+                'password' => bcrypt('123'),
                 'level' => 'admin',
                 'remember_token' => Str::random(60),
                 'created_at' => now(),

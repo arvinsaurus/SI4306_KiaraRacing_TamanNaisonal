@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
             BookingSeeder::class,
             DonationSeeder::class,
             NewsSeeder::class,
-            TicketSeeder::class,
+            // TicketSeeder::class,
         ]);
     }
 }

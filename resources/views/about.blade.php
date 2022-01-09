@@ -97,8 +97,8 @@
     </div>
 
     
-     <!-- News -->
-     <div class="container mb-5">
+    <!-- News -->
+    <div class="container mb-5">
         <div class="row d-flex">
             <div class="col-12 mb-4">
                 <hr>
@@ -107,18 +107,16 @@
         </div>
         <div class="row d-flex">
             <div class="col-12">
-                <div class="row d-flex">
-                @foreach($shownews as $news)
+                <div class="row">
+                    @foreach($shownews as $news)
                     <div class="col-4">
                         <a href="{{$news->url}}">
-                        <div class="col">
                             <img src="{{ $news->gambar}}" class="w-100 mb-3" alt="">
                             <h6>{{ $news->judul }}</h6>
                             <p>{{ $news->created_at->format('d M Y') }}</p>
-                        </div>
                         </a>
                     </div>
-                @endforeach
+                    @endforeach
                 </div>
             </div>
         </div>

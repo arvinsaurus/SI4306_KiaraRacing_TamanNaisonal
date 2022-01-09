@@ -40,8 +40,28 @@ class NewsController extends Controller
         $save = $news->save();
 
         if ($save) {
-            return redirect()->route('admin.news');
+            return redirect()->back();
         }
+        return redirect()->back();
+    }
+
+    public function update(Request $request, $id)
+    {
+        $validator = Validator::make(
+            $request->all(),
+            [
+                'judul' => 'required',
+                'gambar' => 'required',
+                'url' => 'required',
+            ]
+        );
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->with('code', 4);
+        }
+
+        News::find($id)->update($request->all());
+        return redirect()->back();
     }
 
     public function destroy($id)

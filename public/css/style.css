@@ -13,6 +13,13 @@ body {
     ;
 }
 
+:after,
+:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 nav {
     background: #000;
 }
@@ -75,17 +82,10 @@ label {
 }
 
 .bookingimg {
-<<<<<<< HEAD:public/css/style.css
     background-image: url(../img/Booking.png);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-=======
-    background-image: url(img/Booking.png);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no repeat;
->>>>>>> 4f4121c0e6e33d32b16b58cc139e8652d2dcdcf2:public/style.css
 
     height: 100vh;
     width: 100vh;
@@ -150,27 +150,6 @@ a:hover .overlay {
     background-color: #2C2C2C;
     color: white;
     border: 0;
-<<<<<<< HEAD:public/css/style.css
     font-weight: 500;
     border-radius: 4px;
 }
-=======
-    height: 48px;
-}
-
-input[type="text"] {
-    background-color: #2C2C2C;
-    color: white;
-    border: 0;
-    height: 48px;
-}
-
-.count {
-    background-color: #2C2C2C;
-    color: white;
-    border: 0;
-    font-weight: 500;
-    border-radius: 4px;
-}
-
->>>>>>> 4f4121c0e6e33d32b16b58cc139e8652d2dcdcf2:public/style.css
