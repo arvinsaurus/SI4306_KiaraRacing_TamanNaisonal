@@ -107,8 +107,8 @@
         <div class="row d-flex">
             <div class="col-12">
                 <div class="row d-flex">
+                @foreach($shownews as $news)
                     <div class="col-4">
-                        @foreach($shownews as $news)
                         <a href="{{$news->url}}">
                         <div class="col">
                             <img src="{{ $news->gambar}}" class="w-100 mb-3" alt="">
@@ -116,9 +116,8 @@
                             <p>{{ $news->created_at->format('d M Y') }}</p>
                         </div>
                         </a>
-
-                        @endforeach
                     </div>
+                @endforeach
                 </div>
             </div>
         </div>

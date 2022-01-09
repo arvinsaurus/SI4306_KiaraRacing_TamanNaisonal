@@ -97,8 +97,8 @@
     </div>
 
     
-    <!-- News -->
-    <div class="container mb-5">
+     <!-- News -->
+     <div class="container mb-5">
         <div class="row d-flex">
             <div class="col-12 mb-4">
                 <hr>
@@ -108,16 +108,17 @@
         <div class="row d-flex">
             <div class="col-12">
                 <div class="row d-flex">
-                    @foreach($shownews as $news)
-                    <a href="{{$news->url}}">
+                @foreach($shownews as $news)
                     <div class="col-4">
-                        <img src="{{ $news->gambar}}" class="w-100 mb-3" alt="">
-                        <h6>{{ $news->judul }}</h6>
-                        <p>{{ $news->created_at->format('d M Y') }}</p>
+                        <a href="{{$news->url}}">
+                        <div class="col">
+                            <img src="{{ $news->gambar}}" class="w-100 mb-3" alt="">
+                            <h6>{{ $news->judul }}</h6>
+                            <p>{{ $news->created_at->format('d M Y') }}</p>
+                        </div>
+                        </a>
                     </div>
-                    </a>
-
-                    @endforeach
+                @endforeach
                 </div>
             </div>
         </div>
